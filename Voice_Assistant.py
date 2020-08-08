@@ -3,14 +3,14 @@
 
 # Personal Voice Assistant
 
-# In[5]:
+# In[]:
 
 
-import pyttsx3                               #pyttsx3 module works for online as well as offline voice recoginition.
+import pyttsx3                               
 import datetime
-import speech_recognition as sr              #to take the voice inputs
+import speech_recognition as sr              
 import wikipedia
-import webbrowser as wb                      #user to open some common websites on browser
+import webbrowser as wb                      
 import sys,bs4,requests
 import urllib.request, urllib.parse, urllib.error
 import json
@@ -18,7 +18,7 @@ from subprocess import call
 import os
 import time
 import googletrans
-from PIL import ImageGrab                     #to take screenshot of the screen (not for linux users)
+from PIL import ImageGrab                    
 from PIL import Image
 
 eng=pyttsx3.init("sapi5")                     #sapi5 is microsoft speech API .
@@ -47,7 +47,7 @@ def takeinput():
 
 
 def wish():
-    h=int(datetime.datetime.now().hour)                 #gets the hour (0-24) from datetime module.
+    h=int(datetime.datetime.now().hour)                 
     if (h<12 and h>=0):
         speak("Good Morning!")
     elif (h>=12 and h<=16):
@@ -77,7 +77,7 @@ def getweather():
               str(current_humidiy) +
               "\n description  " +
               str(weather_description))
-        print(" Temperature in kelvin unit = " +
+        print(" Temperature in Celsius = " +
               str(current_temperature) +
               "\n humidity (in percentage) = " +
               str(current_humidiy) +
